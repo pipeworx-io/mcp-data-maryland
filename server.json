@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/data-maryland",
+  "title": "Data Maryland",
+  "description": "Maryland Open Data — US government open data (opendata.maryland.gov) via the Socrata SoQL API: state government, health, transportation, budget & environment. Keyless.",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/data-maryland",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-data-maryland",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/data-maryland/mcp"
+    }
+  ]
+}
