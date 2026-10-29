@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-data-maryland",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Maryland Open Data — US government open data (opendata.maryland.gov) via the Socrata SoQL API: state government, health, transportation, budget & environment. Keyless.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-data-maryland": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "data-maryland"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-data-maryland.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/data-maryland",
   "pipeworx": {
-    "sourceHash": "v1-ec02f8d7c9e2a7ceca5cb3d3a60f1294779d17fe87ee93502095736fb5b586b7",
-    "sourceCommit": "ba9dd6df5992aeb16ef2425ee86d1752c34ca636"
+    "mode": "gateway",
+    "slug": "data-maryland",
+    "gatewaySlug": "data-maryland",
+    "sourceHash": "v1-02bee6aca79523f0c1e1d918bfd6d73ed2957ac7c1e31228393fe6724e92b6fc",
+    "sourceCommit": "0b3faaa4d85299a961dd86dea75a0f0e1dad280c"
   }
 }
